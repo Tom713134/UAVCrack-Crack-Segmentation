@@ -6,7 +6,9 @@
 >
 > ResNet34-UNet 五模型概率集成 + 两级后处理 · Crack IoU **65.51**（内部 confirm 193 张，micro，有 GT）
 >
-> 本仓库为**代码与文档**。权重不随仓库分发，获取方式见 §4.2；数据集遵循 CC BY-NC-SA 3.0，需向 VLP 平台申请。
+> **权重下载**：[Hugging Face](https://huggingface.co/Tomt996/uavcrack-crack-segmentation)（5 × PyTorch + 5 × ONNX，永久有效，见 [`docs/WEIGHTS.md`](docs/WEIGHTS.md)）
+>
+> 数据集遵循 CC BY-NC-SA 3.0，需向 VLP 平台申请。
 > 生成时间：2026-10-29
 
 ---
@@ -155,8 +157,16 @@ UAV-CrackX/
 
 ### 4.2 权重
 
-> **权重文件（.pt + .onnx）下载地址、SHA256 与用法见 [`docs/WEIGHTS.md`](docs/WEIGHTS.md)。**
-> 共 10 个文件（5 × PyTorch + 5 × ONNX），约 934 MB，通过网盘分发，链接有效期 ≥ 90 天。
+> **权重已公开发布在 Hugging Face：<https://huggingface.co/Tomt996/uavcrack-crack-segmentation>**
+>
+> 含 5 个 PyTorch (`.pt`) + 5 个 ONNX (`.onnx`)，共 978.8 MB。链接永久有效。
+> 文件清单、SHA256、逐文件直链与批量下载命令见 [`docs/WEIGHTS.md`](docs/WEIGHTS.md)。
+
+```bash
+# 一键下载全部权重
+pip install -U huggingface_hub
+huggingface-cli download Tomt996/uavcrack-crack-segmentation --local-dir ./weights
+```
 
 每个权重 97,871,979 字节，加载后参数量应为 **24,429,281**。
 
@@ -164,8 +174,8 @@ UAV-CrackX/
 
 | 权重 | 训练数据 | 用途 |
 |---|---|---|
-| 本仓库 `WEIGHTS.md` 提供的那组 | 1177 张全量 | **提交用**，对应内部 65.5053 |
-| 831 训练版（未提供） | 831 张 | 内部评测复现 65.37 |
+| 上述 HF 仓库提供的那组 | 1177 张全量 | **提交用**，对应内部 65.5053 |
+| 831 训练版（未公开） | 831 张 | 内部评测复现 65.37 |
 
 **拿不到权重时的两条路**：
 

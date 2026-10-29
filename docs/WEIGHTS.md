@@ -137,8 +137,54 @@ python export_onnx.py --ckpt ../ckpt/seed101.pt --out ../onnx/seed101.onnx
 
 ## 下载地址
 
-> 待填写。要求：huggingface / Google 云盘 / 百度网盘，链接有效期 ≥ 90 天。
+**Hugging Face（推荐，永久有效）**
 
-| 平台 | 链接 | 提取码 | 有效期 |
-|---|---|---|---|
-| （待填写） | | | |
+仓库主页：<https://huggingface.co/Tomt996/uavcrack-crack-segmentation>
+
+| 文件 | 直链 |
+|---|---|
+| `seed101.pt` | <https://huggingface.co/Tomt996/uavcrack-crack-segmentation/resolve/main/ckpt/seed101.pt> |
+| `seed202.pt` | <https://huggingface.co/Tomt996/uavcrack-crack-segmentation/resolve/main/ckpt/seed202.pt> |
+| `seed303.pt` | <https://huggingface.co/Tomt996/uavcrack-crack-segmentation/resolve/main/ckpt/seed303.pt> |
+| `seed404.pt` | <https://huggingface.co/Tomt996/uavcrack-crack-segmentation/resolve/main/ckpt/seed404.pt> |
+| `seed505.pt` | <https://huggingface.co/Tomt996/uavcrack-crack-segmentation/resolve/main/ckpt/seed505.pt> |
+| `seed101.onnx` | <https://huggingface.co/Tomt996/uavcrack-crack-segmentation/resolve/main/onnx/seed101.onnx> |
+| `seed202.onnx` | <https://huggingface.co/Tomt996/uavcrack-crack-segmentation/resolve/main/onnx/seed202.onnx> |
+| `seed303.onnx` | <https://huggingface.co/Tomt996/uavcrack-crack-segmentation/resolve/main/onnx/seed303.onnx> |
+| `seed404.onnx` | <https://huggingface.co/Tomt996/uavcrack-crack-segmentation/resolve/main/onnx/seed404.onnx> |
+| `seed505.onnx` | <https://huggingface.co/Tomt996/uavcrack-crack-segmentation/resolve/main/onnx/seed505.onnx> |
+| `SHA256SUMS` | <https://huggingface.co/Tomt996/uavcrack-crack-segmentation/resolve/main/SHA256SUMS> |
+
+### 批量下载（一行命令）
+
+```bash
+# 方式一：huggingface_hub（推荐，支持断点续传）
+pip install -U huggingface_hub
+huggingface-cli download Tomt996/uavcrack-crack-segmentation --local-dir ./UAVCrack_weights
+
+# 方式二：git clone（需先安装 git-lfs）
+git lfs install
+git clone https://huggingface.co/Tomt996/uavcrack-crack-segmentation
+```
+
+只下其中一类：
+
+```bash
+huggingface-cli download Tomt996/uavcrack-crack-segmentation --include "ckpt/*" --local-dir ./weights
+huggingface-cli download Tomt996/uavcrack-crack-segmentation --include "onnx/*" --local-dir ./weights
+```
+
+### 镜像（国内加速）
+
+若 huggingface.co 访问慢，可用社区镜像：
+
+```bash
+export HF_ENDPOINT=https://hf-mirror.com
+huggingface-cli download Tomt996/uavcrack-crack-segmentation --local-dir ./UAVCrack_weights
+```
+
+| 平台 | 链接 | 有效期 |
+|---|---|---|
+| Hugging Face | <https://huggingface.co/Tomt996/uavcrack-crack-segmentation> | **永久** |
+| 百度网盘 | 暂未提供 | — |
+| Google 云盘 | 暂未提供 | — |
