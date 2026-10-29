@@ -1,6 +1,10 @@
 # ---- 权重（93 MB × 5，共 466 MB，不随仓库分发）----
 *.pt
+*.pth
+*.onnx
 ckpt/
+onnx/
+SHA256SUMS
 
 # ---- 打包产物 ----
 UAVCrack_result代码.zip
