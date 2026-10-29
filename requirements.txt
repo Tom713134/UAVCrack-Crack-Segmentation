@@ -1,0 +1,10 @@
+# 2026 VLP 挑战赛 · 赛道 D（UAV-Crack）参赛作品
+# Python >= 3.9
+#
+# 安装：pip install -r requirements.txt
+# GPU 用户建议先按 https://pytorch.org 选择对应 CUDA 版本的 torch 安装命令
+
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.24.0
+opencv-python>=4.8.0

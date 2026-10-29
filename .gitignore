@@ -1,0 +1,33 @@
+# ---- 权重（93 MB × 5，共 466 MB，不随仓库分发）----
+*.pt
+ckpt/
+
+# ---- 打包产物 ----
+UAVCrack_result代码.zip
+UAVCrack_result代码/
+output/
+result_v1_backup.zip
+
+# ---- 数据集 ----
+data/
+UAV-CrackX/
+UAV-CrackX-clean/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# ---- 环境 / 编辑器 ----
+.venv/
+venv/
+.env
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ---- 运行日志 ----
+*.log
+run_log.json
